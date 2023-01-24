@@ -1,1 +1,1 @@
-from . import translator.py
+from . import translator

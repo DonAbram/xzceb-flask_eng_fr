@@ -1,0 +1,27 @@
+Running server.py will run the entire program
+just like BookManager.py in the practice Labs of rlkee-flaskproject 
+(to see rlkee-flaskproject you have to load Learning Programming in Coursera 
+repository in Codespaces)
+
+The index.html is run same as in BookManager
+
+First ensure that machinetranslation package is importable by 
+going to the final_project folder and in the terminal 
+type python3 first to load python
+then type import machinetranslation
+If no error occurs, then it is importable
+
+then make changes in the server.py for index.htmlk trigger function (renderIndexPage)
+and to the two translate functions
+merely calling french_to_english or english_to_french won't load these 
+functions in server.py
+This is because, the server.py is in the parent folder unlike the 
+test.py which at the time of execution was in the same folder as translator.py
+
+You have to call french_to_english as translator.french_to_english and 
+english_to_french as translator.english_to_french
+the import translator doesn't change it.
+
+Finally, to run server.py, you have to load Python3 on terminal.
+So the execution command of server.py on the terminal when you are in the 
+final_project folder is will be:python3 server.py
