@@ -13,7 +13,7 @@ class test_translator (unittest.TestCase):
     def test_frenchToEnglish(self):
 
         self.assertEqual(frenchToEnglish(None), None)
-
+        
         self.assertEqual(frenchToEnglish('Bonjour'), 'Hello')
 
 if __name__=='_main_':

@@ -22,12 +22,17 @@ language_translator.set_service_url(url)
 #    model_id='en-es').get_result()
 #print(json.dumps(translation, indent=2, ensure_ascii=False))
 
+
+
 def englishToFrench(englishText):
     if englishText is None:
         return None
  
     else:
-        frenchText = language_translator.translate(englishText, model_id = 'en-fr').get_result()
+        frenchText1 = language_translator.translate(englishText, model_id = 'en-fr').get_result()
+        frenchText2 = frenchText1['translations']
+        frenchText = frenchText2[0]['translation']
+
         return frenchText
 
 def frenchToEnglish(frenchText):
@@ -36,5 +41,11 @@ def frenchToEnglish(frenchText):
         return None
 
     else:
-        englishText = language_translator.translate(frenchText, model_id = 'en-fr').get_result()
+        englishText1 = language_translator.translate(frenchText, model_id = 'fr-en').get_result()
+        englishText2 = englishText1['translations']
+        englishText = englishText2[0]['translation']
         return englishText
+
+#test
+#print(json.dumps(englishToFrench('Hello'), indent=2, ensure_ascii=False))
+#print(json.dumps(frenchToEnglish('Bonjour'), indent=2, ensure_ascii=False))
